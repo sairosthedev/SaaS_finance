@@ -1,14 +1,19 @@
+import { Header } from "@/components/header";
+
 type Props = {
     children: React.ReactNode;
 };
 
 
-const DashboardLayout = () => {
+const DashboardLayout = ({children}:Props) => {
     return (
-        <div>
-            Dashboard Layout
-        </div>
+        <>
+        <Header/>
+        <main className="px-3 lg:px-14">
+            {children}
+        </main>
+        </>
     );
-}
+};
 
 export default DashboardLayout;
